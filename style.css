@@ -1,6 +1,22 @@
-/* =========================
-   RESET
-========================= */
+@font-face {
+    font-family: "Faith";
+    src: url("./Faith Collapsing.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "OldEngland";
+    src: url("./VTCSwitchbladeRomance.ttf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: "gil";
+    src: url("./DeiGrat.ttf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+}
 
 * {
     margin: 0;
@@ -41,9 +57,9 @@ body {
 ========================= */
 
 .header {
-    height: 55px;
+    height: 50px;
 
-    padding: 0 15px;
+    padding: 0 150px;
 
     display: flex;
     align-items: center;
@@ -66,11 +82,12 @@ body {
 
     text-decoration: none;
 
-    font-family: Georgia, "Times New Roman", serif;
+    font-family: "gil", serif;
 
-    font-size: 21px;
+    font-size: 20px;
 
-    letter-spacing: -1px;
+    letter-spacing: 10px;
+    margin-left: -15px;
 }
 
 
@@ -88,49 +105,57 @@ body {
 ========================= */
 
 .intro {
-    padding: 10px 10px 0;
+    min-height: 86vh;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
 }
+
 
 
 /* FOTO PRINCIPAL */
 
 .intro-image {
-    width: 100%;
-    height: 430px;
-
+    height: 60vh;
     overflow: hidden;
 }
 
 .intro-image img {
     width: 100%;
     height: 100%;
-
     display: block;
-
     object-fit: cover;
 }
-
 
 /* TEXTO */
 
 .intro-text {
-    padding: 28px 20px 50px;
-
-    max-width: 340px;
-
-    margin: 0 auto;
-
-    text-align: center;
+    margin-top: 70px;
+    padding: 10px;
+    margin-left: auto;
+    text-align: right;
 }
 
-.intro-text p {
-    font-size: 10px;
-
-    line-height: 1.45;
-
-    color: #111;
+.intro-text h5 {
+    font-size: 20px;
+    margin: 0;
+    padding: 10px;
+    letter-spacing: -1px;
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
 }
 
+.intro-text h1 {
+    font-family: "OldEngland", serif;
+    font-size: 60px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 10px;
+    line-height: 1;
+    margin-top: 5px;
+}
 
 /* =========================
    WORKS
@@ -157,7 +182,8 @@ body {
     border-top: 1px solid #111;
     border-bottom: 1px solid #111;
 
-    font-size: 8px;
+    font-size: 13px;
+    font-family: "new times roman", Times, serif;
 
     letter-spacing: 1.5px;
 }
@@ -169,11 +195,6 @@ body {
 
 .work {
 
-    /*
-    Este espacio extra permite
-    que la imagen permanezca
-    fija mientras hacemos scroll.
-    */
 
     height: 120vh;
 
@@ -188,28 +209,23 @@ body {
 ========================= */
 
 .work-image {
-
     position: sticky;
-
     top: 55px;
-
     width: 100%;
-
     height: calc(100vh - 55px);
-
     overflow: hidden;
-
     z-index: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .work-image img {
-
     width: 100%;
-    height: 100%;
-
-    display: block;
-
-    object-fit: cover;
+    height: auto;
+    max-height: 100%;
+    object-fit: contain;
 }
 
 
@@ -276,7 +292,7 @@ body {
 
     font-weight: 400;
 
-    line-height: 0.78;
+    line-height: 1;
 
     letter-spacing: -3px;
 }

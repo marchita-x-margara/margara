@@ -75,6 +75,7 @@ Margara Marchita
                     <img
                         src="imagesobra-01.jpg"
                         alt="Obra 01"
+                         onclick="cambiarImagen(this)"
                     >
 
                 </div>
@@ -113,6 +114,7 @@ Margara Marchita
                     <img
                         src="imagesobra-02.jpg"
                         alt="Obra 02"
+                        
                     >
 
                 </div>
@@ -151,6 +153,7 @@ Margara Marchita
                     <img
                         src="imagesobra-03.jpg"
                         alt="Obra 03"
+                         onclick="cambiarImagen(this)"
                     >
 
                 </div>
@@ -189,6 +192,7 @@ Margara Marchita
                     <img
                         src="imagesobra-04.jpg"
                         alt="Obra 04"
+                        onclick="cambiarImagen2(this)"
                     >
 
                 </div>
@@ -222,16 +226,35 @@ Margara Marchita
 
         <!-- FOOTER -->
 
-        <footer>
+    <footer>
+    <p>@margara.x.marchita</p>
+</footer>
 
-            <p>MARGARA</p>
+<script>
+    
+function cambiarImagen(imagen) {
+    const imagenes = [
+        "imagesobra-01.jpg",
+        "imagesobra-01-3.jpg",
+        "imagesobra-01-4.jpg",
+        "imagesobra-01-5.jpg",
+        "imagesobra-01-6.jpg"
+    ];
 
-            <p>@margara.x.marchita</p>
+    let actual = imagenes.indexOf(imagen.src.split("/").pop());
 
-        </footer>
+    actual++;
 
-    </main>
+    if (actual >= imagenes.length) {
+        actual = 0;
+    }
+
+    imagen.src = imagenes[actual];
+}
+
+</script>
+
+</main>
 
 </body>
-
 </html>

@@ -41,11 +41,21 @@ body {
 ========================= */
 
 .portfolio {
-    width: 100%;
-    max-width: 430px;
-    min-height: 100vh;
-    margin: 0 auto;
-    background: #f7f4f2;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: entrada 1s ease-out forwards;
+}
+
+@keyframes entrada {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* =========================
@@ -351,13 +361,127 @@ footer {
    DESKTOP
 ========================= */
 
+/* =========================
+   DESKTOP
+========================= */
+
 @media (min-width: 600px) {
 
     .portfolio {
+        width: 100%;
+        max-width: 1400px;
+        margin: 0 auto;
 
         box-shadow:
             0 0 40px rgba(0, 0, 0, 0.4);
-
     }
 
+    /* HEADER */
+
+    .header {
+        padding: 0 40px;
+    }
+
+
+    /* =========================
+       INTRO DESKTOP
+    ========================= */
+
+    .intro {
+        height: 80vh;
+        min-height: 600px;
+
+        display: flex;
+        flex-direction: row;
+
+        background: #f2f2f0;
+    }
+
+    /* IMAGEN IZQUIERDA */
+
+    .intro-image {
+        width: 65%;
+        height: 100%;
+
+        overflow: hidden;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .intro-image img {
+        width: 100%;
+        height: 100%;
+
+        display: block;
+
+        object-fit: contain;
+    }
+
+
+    /* TEXTO DERECHA */
+
+    .intro-text {
+        width: 35%;
+        height: 100%;
+
+        margin: 0;
+        padding: 40px;
+
+        display: flex;
+        flex-direction: column;
+
+        justify-content: center;
+        align-items: flex-end;
+
+        text-align: right;
+    }
+
+    .intro-text h5 {
+        font-size: 13px;
+        padding: 0;
+        margin-bottom: 15px;
+    }
+
+    .intro-text h1 {
+        font-size: clamp(45px, 5vw, 75px);
+
+        letter-spacing: 5px;
+        line-height: 1;
+    }
+
+
+    /* =========================
+       WORKS
+    ========================= */
+
+    .works {
+        padding: 0 30px;
+    }
+
+    .work {
+        height: 120vh;
+    }
+
+    .work-image {
+        height: calc(100vh - 55px);
+    }
+
+    .work-info {
+        padding: 30px 40px 25px;
+    }
+
+    .work-info h2 {
+        font-size: clamp(45px, 5vw, 75px);
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+        padding: 25px 40px;
+    }
 }
